@@ -12,6 +12,7 @@
 	<artifactId>MultipleDB</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MultipleDB</name>
+	<packaging>war</packaging>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -39,6 +40,11 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-tomcat</artifactId>
+<scope>provided</scope>
+</dependency>
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
