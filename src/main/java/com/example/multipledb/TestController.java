@@ -1,5 +1,7 @@
 package com.example.multipledb;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,5 +26,19 @@ public class TestController {
         secondaryEntity.setDescription("Secondary Entity");
         secondaryRepository.save(secondaryEntity);
         return "Entities saved!";
+    }
+    
+    @GetMapping("/getP")
+    public List<PrimaryEntity> getP() {
+      
+        return primaryRepository.findAll();
+      
+    }
+    
+    @GetMapping("/getS")
+    public List<SecondaryEntity> getS() {
+    
+        return secondaryRepository.findAll();
+       
     }
 }
