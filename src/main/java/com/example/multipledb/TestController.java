@@ -17,6 +17,13 @@ public class TestController {
     private PRepository primaryRepository;
     @Autowired
     private SRepository secondaryRepository;
+    
+    @GetMapping("/")
+    public String getMethodName() {
+        return new String("Hello");
+    }
+    
+    
     @GetMapping("/test")
     public String test() {
         PrimaryEntity primaryEntity = new PrimaryEntity();
